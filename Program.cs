@@ -198,6 +198,7 @@ namespace Competitive_Programming
             return maxlen;
         }
 
+        // Finding last word lenght in the given string
 
         public int LengthOfLastWord(string s)
         {
@@ -205,7 +206,7 @@ namespace Competitive_Programming
             //return wordArray[wordArray.Length - 1].Length;
             return s.Trim().Split(' ').LastOrDefault().Length;
         }
-
+// Convert Roman Numbers to Normal Numbers
         public int RomantoNumber(string s)
         {
             Dictionary<char, int> roman = new Dictionary<char, int>()
