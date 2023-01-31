@@ -232,6 +232,24 @@ namespace Competitive_Programming
             }
             return result;
         }
+        //Longest Prefix
+           public string LongestPrefix(string[] input)
+        {
+           
+            if (!input.Any())
+            {
+                return string.Empty;
+            }
+            int minlen = input.Min(y => y.Length);
+            string shortestWord = input.FirstOrDefault(x => x.Length == minlen);
+            for (var i = shortestWord.Length; i > 0; i--)
+            {
+                if (input.All(a => a.StartsWith(shortestWord )))
+                    return shortestWord ;
+                shortestWord = shortestWord.Substring(0, i - 1);
+            }
+            return null;
+        }
     }
 }
  
